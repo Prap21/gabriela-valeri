@@ -1,0 +1,105 @@
+:root {
+    --color-nav: rgb(63, 75, 32);
+    --color-black: #191919;
+    --hover-effect: #c6bd3fd7;
+    --dark-olive: rgb(37, 45, 16);
+    --color-brown: #4A3C31;
+    --color-beige: #F5DEB3;
+    --color-beige-fade: rgb(255, 247, 231);
+}
+
+/* Sidebar Menu */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initially hidden off-screen */
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease; /* Smooth transition */
+    z-index: 11;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    z-index: 9999;
+}
+  
+/* This class will move the sidebar into view */
+.sidebar.open {
+    left: 0;
+}
+  
+/* Apply custom scrollbar styles only for .sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar (for horizontal scrollbar) */
+}
+
+/* Style the track (background of the scrollbar) */
+.sidebar::-webkit-scrollbar-track {
+  background: #d1d1d1; /* Light background for the track */
+  border-radius: 10px; /* Optional: makes the track rounded */
+}
+
+/* Style the handle (the draggable part of the scrollbar) */
+.sidebar::-webkit-scrollbar-thumb {
+  background: #b8b8b8; /* Gray color for the scrollbar handle */
+  border-radius: 10px; /* Optional: rounds the handle */
+}
+
+/* Hover effect on the handle */
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #999; /* Darker color when hovered */
+}
+
+/* Optional: style the corner of the scrollbar */
+.sidebar::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}
+
+  
+  .sidebar a.close-btn {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 20px; /* Space below the close button */
+    font-size: 24px; /* Increased font size for close button */
+    cursor: pointer;
+  }
+  
+  .close-btn i {
+    margin-right: 10px; /* Space between icon and text */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    margin: 15px 0; /* Space between links */
+  }
+  
+  .sidebar ul li a {
+    font-size: 20px; /* Increased font size for sidebar links */
+  }
+  
+  .sidebar h2 {
+    font-size: 24px;
+    color: var(--color-brown);
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  
+  .sidebar-h3 {
+    align-items: center;
+    margin: 10px auto;
+    font-size: 1.2rem;
+    color: var(--color-brown);
+  }
+  
+  .sidebar-h3:hover {
+    color: var(--hover-effect);
+  }
+  

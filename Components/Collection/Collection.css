@@ -1,0 +1,166 @@
+:root {
+    --color-nav: rgb(63, 75, 32);
+    --color-black: #191919;
+    --hover-effect: #c6bd3fd7;
+    --dark-olive: rgb(37, 45, 16);
+    --color-brown: #4A3C31;
+    --color-beige: #F5DEB3;
+    --color-beige-fade: rgb(255, 247, 231);
+  }
+
+/* Add this to the head of your HTML or in your CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.collection-container a {
+  text-decoration: inherit; /* Remove underline */
+  color: inherit; /* Inherit the text color of the parent element */
+}
+
+.collection-container a:hover {
+  color: inherit; /* Prevent hover styles from affecting links */
+}
+
+.collection-container a::after {
+  content: none;
+}
+
+.collection-container{
+    color:var(--color-brown);
+    background-color: #f5f5f5; /* Soft light gray */
+}
+
+.product-list{
+    margin: 0 auto;
+    background-color: #f6f6f6;
+}
+
+.collection-container h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--hover-effect);
+    text-align: center;
+    padding: 40px 0; 
+    width: 100%;
+}
+
+.collection-container {
+    padding: 20px;
+  }
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 products per row */
+    gap: 30px;
+  }
+  
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 380px;
+    position: relative; /* To position elements inside the card */
+    background-color: white;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Faster fade-out and vertical movement */
+  }
+
+  .product-card:hover{
+    transform: scale(1.05);
+    box-shadow: 4px 4px 12px rgba(90, 90, 90, 0.8); /* Shadow on the right and bottom */
+  }
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Position .details slightly above the image */
+.details {
+    width: 100%;
+    position: absolute;
+    bottom: 35px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.details h3 {
+    font-size: 18px;color: #191919;
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+.details p {
+    color: #777;
+    font-size: 1.05rem;
+    margin: 10px 0;
+}
+
+.details p span{
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #191919;
+}
+
+/* Fix the details-div at the bottom */
+.details-div {
+    position: absolute;
+    bottom: 15px; /* Adjust distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.product-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 5px auto;
+}
+
+span .category-badge {
+  color: #f5f5f5;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+  
+  
+  @media (min-width: 1600px) {
+    .product-list {
+      grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+    }
+  }
+
+  /* Responsive: 3 products per row on smaller screens */
+  @media (max-width: 1024px) {
+    .product-list {
+      grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+    }
+  }
+  
+  /* Responsive: 2 products per row on even smaller screens */
+  @media (max-width: 768px) {
+    .product-list {
+      grid-template-columns: repeat(2, 1fr); /* 2 products per row */
+    }
+  }
+  
+  /* Responsive: 1 product per row on very small screens */
+  @media (max-width: 480px) {
+    .product-list {
+      grid-template-columns: 1fr; /* 1 product per row */
+    }
+  }
+  

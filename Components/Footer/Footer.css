@@ -1,0 +1,73 @@
+/* Footer Styling */
+.footer {
+    background-color: var(--color-nav); /* Footer background color */
+    color: #f0f0f0;
+    padding: 15px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    height: 160px;
+}
+
+.footer h3 {
+    font-size: 24px;
+    color: var(--hover-effect);
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.contact-item i {
+    font-size: 16px;
+    color: var(--hover-effect);
+    vertical-align: middle; /* Align icon with the middle of the text */
+}
+
+.contact-item p {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    line-height: 1.5; /* Ensure a consistent line height */
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Vertically center the icon with the text */
+}
+
+.contact-item a {
+    margin-left: 8px;
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--hover-effect);
+}
+
+.footer-bottom {
+    color: #ddd;
+}
+
+.footer-bottom p {
+    margin: 0 0;
+    padding: 0;
+    font-size: 12px;
+}
