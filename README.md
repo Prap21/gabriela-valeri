@@ -3,7 +3,7 @@
 A modern, fully responsive e-commerce web application designed for custom shoe retail. Built to deliver a seamless shopping experience from product discovery all the way to checkout.
 
 ---
-🚀 **Live Demo:** Try the live version here: [Gabriela Valeri Storefront](https://Prap21.github.io/gabriela-valeri/)
+🚀 **Live Demo:** Try the live version here: [Gabriela Valeri](https://Prap21.github.io/gabriela-valeri/)
 
 ## ✨ Key Features
 
