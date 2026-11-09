@@ -25,4 +25,5 @@ A modern, fully responsive e-commerce web application designed for custom shoe r
 
 **Full-Stack Developer**  
 GitHub: [@Prap21](https://github.com/Prap21)  
+Email: dimosprap@gmail.com
 *Available for custom web applications, e-commerce storefronts, and website development.*
