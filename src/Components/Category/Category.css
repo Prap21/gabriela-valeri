@@ -1,0 +1,216 @@
+.category-div {
+  min-height: 70vh;
+  color: var(--color-brown);
+  animation: fadeIn 0.35s ease-out;
+}
+
+.shoe-categories {
+  position: sticky;
+  z-index: 1001;
+  top: 82px;
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  padding: 0 clamp(18px, 5vw, 72px);
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(247, 245, 240, 0.97);
+  box-shadow: 0 4px 12px rgba(44, 39, 31, 0.04);
+}
+
+.shoe-categories > ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 4vw, 48px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shoe-categories li {
+  position: relative;
+  list-style: none;
+}
+
+.shoe-categories .category-header {
+  display: inline-flex;
+  align-items: center;
+  min-height: 58px;
+  color: var(--color-brown);
+  font-size: 0.9rem;
+  font-weight: 650;
+  letter-spacing: 0.025em;
+}
+
+.shoe-categories .category-header:hover,
+.dropdown-content a:hover {
+  color: var(--color-nav);
+}
+
+.shoe-categories .dropdown-content {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: -16px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  min-width: 180px;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-paper);
+  box-shadow: var(--shadow-card);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.shoe-categories .dropdown:hover .dropdown-content,
+.shoe-categories .dropdown:focus-within .dropdown-content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.dropdown-content li {
+  padding: 0;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 9px 11px;
+  color: var(--color-brown);
+  font-size: 0.88rem;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background: var(--color-beige-fade);
+}
+
+.category-container {
+  min-height: 60vh;
+  padding: clamp(24px, 5vw, 64px) clamp(18px, 5vw, 72px) 80px;
+  background: var(--color-paper);
+}
+
+.category-h2 {
+  max-width: 1440px;
+  margin: 0 auto 28px;
+  padding: 0;
+  color: var(--color-brown);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.category-container .product-list {
+  display: grid;
+  max-width: 1440px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 28px);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.category-container .product-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-paper);
+  box-shadow: 0 2px 8px rgba(44, 39, 31, 0.035);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.category-container .product-card:hover {
+  box-shadow: var(--shadow-card);
+  transform: translateY(-4px);
+}
+
+.category-container .product-link {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.category-container .product-card img {
+  width: 100%;
+  height: clamp(210px, 23vw, 300px);
+  object-fit: cover;
+}
+
+.category-container .product-card h3 {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 15px 16px 6px;
+  color: var(--color-black);
+  font-size: 0.96rem;
+  font-weight: 550;
+  line-height: 1.45;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.category-container .product-card p {
+  margin: auto 16px 16px;
+  color: var(--color-nav);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .category-container .product-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .shoe-categories {
+    top: 68px;
+    overflow: visible;
+    padding: 0 18px;
+  }
+
+  .shoe-categories > ul {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .shoe-categories .category-header {
+    min-height: 52px;
+    font-size: 0.8rem;
+  }
+
+  .shoe-categories .dropdown-content {
+    left: 0;
+    min-width: 155px;
+  }
+
+  .category-container .product-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .category-container .product-card img {
+    height: clamp(170px, 47vw, 250px);
+  }
+}
+
+@media (max-width: 360px) {
+  .category-container .product-list {
+    grid-template-columns: 1fr;
+  }
+}

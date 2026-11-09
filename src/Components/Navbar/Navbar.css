@@ -1,0 +1,154 @@
+.navbar {
+  position: sticky;
+  z-index: 1002;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 82px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(18px, 4vw, 56px);
+  border-bottom: 1px solid rgba(67, 60, 50, 0.08);
+  background: rgba(255, 254, 250, 0.96);
+  color: var(--color-brown);
+  box-shadow: 0 3px 18px rgba(44, 39, 31, 0.05);
+  backdrop-filter: blur(14px);
+}
+
+.nav-logo {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+
+.nav-logo img {
+  width: auto;
+  max-width: 180px;
+  max-height: 68px;
+  object-fit: contain;
+}
+
+.nav-left > ul,
+.nav-right > ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 26px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-left > ul {
+  list-style: none;
+}
+
+.nav-right > ul {
+  list-style: none;
+}
+
+.nav-left,
+.nav-right {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar a {
+  position: relative;
+  color: var(--color-brown);
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: var(--color-nav);
+}
+
+.menu {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  padding: 10px 0;
+  border: 0;
+  color: var(--color-brown);
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.menu i {
+  font-size: 1.08rem;
+}
+
+.nav-right > ul {
+  gap: 18px;
+}
+
+.nav-right {
+  margin-left: auto;
+}
+
+.nav-right > ul > li > a {
+  display: inline-flex;
+  min-width: 32px;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  font-size: 1.08rem;
+}
+
+.cart-link {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: 1px;
+  right: -3px;
+  display: flex;
+  width: 18px;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-paper);
+  border-radius: 50%;
+  color: #fff;
+  background: var(--color-nav);
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 68px;
+    padding: 0 16px;
+  }
+
+  .nav-logo img {
+    max-width: 124px;
+    max-height: 54px;
+  }
+
+  .nav-right > ul {
+    gap: 8px;
+  }
+
+  .nav-right > ul > li > a {
+    min-width: 30px;
+    font-size: 1rem;
+  }
+
+  .menu {
+    gap: 0;
+    font-size: 0;
+  }
+
+  .menu i {
+    font-size: 1.2rem;
+  }
+
+}

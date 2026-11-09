@@ -1,0 +1,73 @@
+:root {
+  --color-nav: #39432e;
+  --color-black: #24231f;
+  --hover-effect: #b69a62;
+  --dark-olive: #293222;
+  --color-brown: #433c32;
+  --color-beige: #e9e1d2;
+  --color-beige-fade: #f7f5f0;
+  --color-paper: #fffefa;
+  --color-muted: #77736b;
+  --color-border: #e7e2d8;
+  --shadow-soft: 0 12px 35px rgba(44, 39, 31, 0.08);
+  --shadow-card: 0 8px 24px rgba(44, 39, 31, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  color: var(--color-black);
+  background: var(--color-paper);
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  color: var(--color-paper);
+  background: var(--color-nav);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(182, 154, 98, 0.75);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}

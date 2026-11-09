@@ -1,0 +1,99 @@
+.sidebar {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: min(340px, 88vw);
+  height: 100%;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 24px clamp(20px, 5vw, 34px) 36px;
+  border-right: 1px solid var(--color-border);
+  background: var(--color-paper);
+  box-shadow: 10px 0 40px rgba(28, 26, 22, 0.13);
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-105%);
+  transition: transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.sidebar.open {
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+  transition-delay: 0s;
+}
+
+.sidebar a {
+  color: var(--color-brown);
+  transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+  color: var(--color-nav);
+}
+
+.sidebar .close-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 10px 0 18px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-brown);
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.close-btn i {
+  font-size: 1.15rem;
+}
+
+.sidebar ul {
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 8px 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.sidebar h2 {
+  margin: 14px 0 8px;
+  color: var(--color-brown);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+}
+
+.sidebar-h3 {
+  display: block;
+  margin: 9px 0;
+  color: var(--color-nav);
+}
+
+.sidebar-h3 h3 {
+  margin: 0;
+  font-size: 0.96rem;
+  font-weight: 650;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar {
+    transition-duration: 0.01ms;
+    transition-delay: 0s;
+  }
+}
