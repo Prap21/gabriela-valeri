@@ -1,4 +1,4 @@
-# 🛍️ Gabriela Valeri — Modern E-Commerce Website
+# 🛍️ Gabriela Valeri — Modern E-Commerce Website (still under construction...)
 
 A modern, fully responsive e-commerce web application designed for custom shoe retail. Built to deliver a seamless shopping experience from product discovery all the way to checkout.
 
